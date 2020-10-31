@@ -5,6 +5,9 @@ package com.rcdz.mykotlindemo
  * 邮箱 983049539@qq.com
  */
 public class MainTest {
+//Coroutine 协程
+    fun main(){
 
+}
 
 }

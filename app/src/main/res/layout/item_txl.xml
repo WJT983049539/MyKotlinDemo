@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_margin="@dimen/dp_10"
+    android:background="@drawable/edit_txk"
+    android:padding="@dimen/dp_10"
+    >
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="王江涛"
+        android:textColor="#2196F3"
+        android:textSize="20sp"
+        ></TextView>
+    <TextView
+        android:id="@+id/number"
+        android:layout_marginTop="@dimen/dp_5"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="1593593825"
+        android:textColor="#3F51B5"
+        ></TextView>
+
+</LinearLayout>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.rcdz.mykotlindemo">
+
+    <application
+        android:name=".KotlinAppaction"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:usesCleartextTraffic="true"
+        android:requestLegacyExternalStorage="true"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".designtest.DrawerLayoutActivity"
+            android:uiOptions="splitActionBarWhenNarrow"
+            >
+
+        </activity>
+        <activity android:name=".view.activity.RomTestActivity"/>
+        <activity android:name=".view.activity.GetTxlActivity"/>
+        <activity android:name=".view.activity.TestJavaActivity"/>
+        <activity android:name=".view.activity.RefreshRecyclerActivity"/>
+        <activity android:name=".view.activity.Rotaing_particlesActivity"/>
+        <activity android:name=".view.activity.WebVietestActivity"/>
+
+        <activity android:name="com.donkingliang.imageselector.ImageSelectorActivity"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+        android:configChanges="orientation|keyboardHidden|screenSize"/>
+
+        <activity android:name="com.donkingliang.imageselector.PreviewActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:configChanges="orientation|keyboardHidden|screenSize"/>
+
+        <activity
+            android:name="com.donkingliang.imageselector.ClipImageActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".view.activity.SelectPictureActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+
+        <meta-data
+            android:name="design_width_in_dp"
+            android:value="360"/>
+        <meta-data
+            android:name="design_height_in_dp"
+            android:value="640"/>
+    </application>
+
+    <!-- 基本权限 -->
+    <uses-permission android:name="${applicationId}.permission.JPUSH_MESSAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" /> <!-- 使用蓝牙的权限 -->
+    <uses-permission android:name="android.permission.BLUETOOTH" /> <!-- 扫描蓝牙设备或者操作蓝牙设置 -->
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" /> <!-- 模糊定位权限，仅作用于6.0+ -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> <!-- 通过wifi和移动基站获取定位权限 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> <!-- 通过gps获取定位权限 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-feature android:name="android.hardware.camera2" /> <!-- <uses-feature android:name="android.hardware.camera" /> -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- 摄像头权限 -->
+    <uses-permission android:name="android.permission.FLASHLIGHT" /> <!-- 这个权限用于获取wifi的获取权限，wifi信息会用来进行网络定位 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" /> <!-- 访问网络，网络定位需要上网 -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" /><!--获取通讯录-->
+</manifest>
+
+

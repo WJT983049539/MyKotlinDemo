@@ -3,11 +3,10 @@ package com.rcdz.mykotlindemo
 import android.content.Intent
 import android.view.View
 import android.widget.Button
-import androidx.recyclerview.widget.RecyclerView
 import com.rcdz.mykotlindemo.designtest.DrawerLayoutActivity
-import com.wjt.mylibrary.base.BaseActivity
 import com.rcdz.mykotlindemo.view.activity.RefreshRecyclerActivity
 import com.rcdz.mykotlindemo.view.activity.Rotaing_particlesActivity
+import com.rcdz.mykotlindemo.view.activity.TestJavaActivity
 
 class MainActivity : com.wjt.mylibrary.base.BaseActivity(), View.OnClickListener{
     lateinit var bt_ry_refresh:Button
@@ -26,6 +25,9 @@ class MainActivity : com.wjt.mylibrary.base.BaseActivity(), View.OnClickListener
         bt_ry_refresh.setOnClickListener(this)
         val bt_rotating_particles:Button=findViewById(R.id.bt_rotating_particles)
         bt_rotating_particles.setOnClickListener(this)
+
+        val javatest:Button=findViewById(R.id.javatest)
+        javatest.setOnClickListener(this)
     }
 
     override fun setNowActivityName(): String {
@@ -49,6 +51,10 @@ class MainActivity : com.wjt.mylibrary.base.BaseActivity(), View.OnClickListener
             }
             R.id.bt_rotating_particles->{
                 var intent=Intent(this@MainActivity, Rotaing_particlesActivity::class.java)
+                startActivity(intent)
+            }
+            R.id.javatest->{
+                var intent=Intent(this@MainActivity, TestJavaActivity::class.java)
                 startActivity(intent)
             }
 

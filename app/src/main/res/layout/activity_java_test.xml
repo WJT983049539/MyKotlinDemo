@@ -30,4 +30,32 @@
         android:text="获取通讯录"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button2" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="toast"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button3" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="@dimen/dp_200"
+        android:layout_height="wrap_content"
+        android:text="只能输入18个字哦只能输入18个字哦只能输入18个字哦只能输入18个字哦只能输入18个字哦只能输入18个字哦只能输入18个字哦只能输入18个字哦只能输入18个字哦"
+        android:textSize="12sp"
+        android:singleLine="true"
+        android:maxEms="10"
+        android:ellipsize="end"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button4" />
+
+    <Button
+        android:id="@+id/dialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="dialog模板各式各样的呢"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
 </androidx.constraintlayout.widget.ConstraintLayout>

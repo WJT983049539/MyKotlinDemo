@@ -12,6 +12,12 @@
         android:layout_height="wrap_content"
         android:text="选择图片"
         ></Button>
+    <Button
+        android:id="@+id/startpicture_and_video"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="选择图片或视频"
+        ></Button>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/picture_selected"

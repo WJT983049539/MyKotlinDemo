@@ -6,6 +6,7 @@ import com.lzy.okgo.cache.CacheEntity
 import com.lzy.okgo.cache.CacheMode
 import com.lzy.okgo.https.HttpsUtils
 import com.qw.soul.permission.SoulPermission
+import com.wjt.mylibrary.utils.GlobalToast
 import me.jessyan.autosize.AutoSize
 import me.jessyan.autosize.AutoSizeConfig
 import okhttp3.OkHttpClient
@@ -19,6 +20,7 @@ import javax.net.ssl.SSLSession
 class KotlinAppaction : Application() {
     override fun onCreate() {
         super.onCreate()
+        GlobalToast.init(this);
         AutoSizeConfig.getInstance().setCustomFragment(true);//适配fragment
         AutoSize.initCompatMultiProcess(this);
         val sslParams = HttpsUtils.getSslSocketFactory()

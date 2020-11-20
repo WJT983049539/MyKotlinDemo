@@ -27,7 +27,9 @@
         </activity>
         <activity android:name=".view.activity.RomTestActivity"/>
         <activity android:name=".view.activity.GetTxlActivity"/>
-        <activity android:name=".view.activity.TestJavaActivity"/>
+        <activity android:name=".view.activity.TestJavaActivity"
+            android:launchMode="singleInstance"
+            />
         <activity android:name=".view.activity.RefreshRecyclerActivity"/>
         <activity android:name=".view.activity.Rotaing_particlesActivity"/>
         <activity android:name=".view.activity.WebVietestActivity"/>
@@ -39,7 +41,17 @@
         <activity android:name="com.donkingliang.imageselector.PreviewActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"
             android:configChanges="orientation|keyboardHidden|screenSize"/>
+        
 
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.rcdz.mykotlindemo.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
         <activity
             android:name="com.donkingliang.imageselector.ClipImageActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />

@@ -45,15 +45,20 @@ class SelectPictureActivity : BaseActivity() {
 
     override fun onClick(view: View) {
     if (view.id==R.id.startpicture){
+        //第一种使用的是ImageSelector
         getPremission2()
 
+    }else if(view.id==R.id.startpicture_and_video){
+        //第二种使用的是
     }
     }
     override fun initData() {}
     override fun initView() {
         var  selected=findViewById<Button>(R.id.startpicture)
+        var  startpicture_and_video=findViewById<Button>(R.id.startpicture_and_video)
         PictureList=findViewById(R.id.picture_selected)
         selected.setOnClickListener(this)
+        startpicture_and_video.setOnClickListener(this)
         PictureList.layoutManager= GridLayoutManager(this,2)
         adapter= PictureAdapter(pictures, this)
         PictureList.adapter=adapter;

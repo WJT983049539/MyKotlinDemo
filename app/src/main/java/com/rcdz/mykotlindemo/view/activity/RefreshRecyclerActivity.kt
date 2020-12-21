@@ -20,7 +20,6 @@ class RefreshRecyclerActivity : com.wjt.mylibrary.base.BaseActivity(){
     lateinit var adapter1: RecyclerViewAdapter
     override fun initView() {
         //设置线性布局管理器
-
         Handler().postDelayed({
             rc_refresh.showView(ViewStatus.LOADING_STATUS)
             Handler().postDelayed({
@@ -35,6 +34,7 @@ class RefreshRecyclerActivity : com.wjt.mylibrary.base.BaseActivity(){
         rc_test.layoutManager = LinearLayoutManager(this)
         adapter1=RecyclerViewAdapter(list)
         rc_test.adapter=adapter1
+        //加载的时候显示骨架loddin页面，好像没啥用
 
 //        rc_refresh.autoRefresh() //自动刷新
 
@@ -43,7 +43,7 @@ class RefreshRecyclerActivity : com.wjt.mylibrary.base.BaseActivity(){
                 Handler().postDelayed({ rc_refresh.finishRefresh() }, 2000)
             }
 
-            override fun loadMore() { //下拉加载
+            override fun loadMore() { //上拉拉加载
                 var bean = UserDataLoadMore("刷新新加数据", 0)
                 list.add(bean)
                 adapter1.notifyDataSetChanged()
@@ -78,7 +78,9 @@ class RefreshRecyclerActivity : com.wjt.mylibrary.base.BaseActivity(){
         error.findViewById<View>(R.id.error_refresh).setOnClickListener {
             rc_refresh.showView(ViewStatus.LOADING_STATUS)
             Handler()
-                .postDelayed({ rc_refresh.showView(ViewStatus.CONTENT_STATUS) }, 2000)
+                .postDelayed({
+                    rc_refresh.showView(ViewStatus.CONTENT_STATUS)
+                }, 2000)
         }
     }
 }

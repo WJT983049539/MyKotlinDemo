@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".MainActivity">
+
+
+        <com.rcdz.mykotlindemo.view.customview.ohter.NumberProgressBar
+            android:id="@+id/numprogress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:progress_reached_color="#009688"
+            app:progress_unreached_color="#FF5722"
+            app:progress_reached_bar_height="@dimen/dp_30"
+            app:progress_unreached_bar_height="@dimen/dp_30"
+            app:progress_text_size="20sp"
+            app:progress_text_color="#FFC107"
+            ></com.rcdz.mykotlindemo.view.customview.ohter.NumberProgressBar>
+        <!-- 系统提供的圆形进度条,依次是大中小 -->
+        <ProgressBar
+            style="@android:style/Widget.ProgressBar.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"/>
+
+        <ProgressBar
+            style="@android:style/Widget.ProgressBar.Large"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <!--系统提供的水平进度条-->
+        <ProgressBar
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="100"
+            android:progress="18" />
+
+        <ProgressBar
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:indeterminate="false" />
+        <com.rcdz.mykotlindemo.view.customview.ohter.RotateCircleProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            ></com.rcdz.mykotlindemo.view.customview.ohter.RotateCircleProgressBar>
+
+        <com.rcdz.mykotlindemo.view.customview.ohter.HorizontalProgressBarWithNumber
+            android:id="@+id/hpbwn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            app:progress_circle_color2="#ff000000"
+            app:progress_reached_bar_height2="20dp"
+            app:progress_reached_color2="#FFFF4081"
+            app:progress_text_color2="#ffffffff"
+            app:progress_text_size2="14sp"
+            app:progress_unreached_bar_height2="20dp"
+            app:progress_unreached_color2="#ffBCB4E8" />
+
+
+
+        <!--网址 https://github.com/lopspower/CircularProgressBar-->
+        <com.mikhaellopez.circularprogressbar.CircularProgressBar
+            android:id="@+id/circularProgressBar"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            app:cpb_background_progressbar_color="#b6bbd8"
+            app:cpb_background_progressbar_width="30dp"
+            app:cpb_progress_direction="to_right"
+            app:cpb_progressbar_color="#3f51b5"
+            app:cpb_progressbar_width="15dp"
+            app:cpb_round_border="true"
+            app:cpb_indeterminate_mode="true"/>
+    </LinearLayout>
+
+
+</LinearLayout>

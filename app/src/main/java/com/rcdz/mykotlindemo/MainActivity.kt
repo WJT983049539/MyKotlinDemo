@@ -3,6 +3,8 @@ package com.rcdz.mykotlindemo
 import android.content.Intent
 import android.view.View
 import android.widget.Button
+import android.widget.ImageView
+import com.bumptech.glide.Glide
 import com.rcdz.mykotlindemo.designtest.DrawerLayoutActivity
 import com.rcdz.mykotlindemo.view.activity.RefreshRecyclerActivity
 import com.rcdz.mykotlindemo.view.activity.Rotaing_particlesActivity
@@ -15,7 +17,6 @@ class MainActivity : com.wjt.mylibrary.base.BaseActivity(), View.OnClickListener
     }
 
     override fun initData() {
-
     }
 
     override fun initView() {
@@ -25,9 +26,9 @@ class MainActivity : com.wjt.mylibrary.base.BaseActivity(), View.OnClickListener
         bt_ry_refresh.setOnClickListener(this)
         val bt_rotating_particles:Button=findViewById(R.id.bt_rotating_particles)
         bt_rotating_particles.setOnClickListener(this)
-
         val javatest:Button=findViewById(R.id.javatest)
         javatest.setOnClickListener(this)
+
     }
 
     override fun setNowActivityName(): String {
@@ -38,7 +39,7 @@ class MainActivity : com.wjt.mylibrary.base.BaseActivity(), View.OnClickListener
 
         when(p0?.id){
             //点击进入designActivity
-            R.id.dssign->{
+            R.id.dssign->{ //DrawerLayout
                 val intent=Intent(this@MainActivity,DrawerLayoutActivity::class.java)
                     startActivity(intent)
                 this@MainActivity.finish();
@@ -49,7 +50,7 @@ class MainActivity : com.wjt.mylibrary.base.BaseActivity(), View.OnClickListener
                 startActivity(intent)
                 this@MainActivity.finish();
             }
-            R.id.bt_rotating_particles->{
+            R.id.bt_rotating_particles->{ //旋转粒子
                 var intent=Intent(this@MainActivity, Rotaing_particlesActivity::class.java)
                 startActivity(intent)
             }

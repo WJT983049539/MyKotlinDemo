@@ -1,5 +1,6 @@
 package com.rcdz.mykotlindemo.tools
 
+import android.util.Log
 import com.google.gson.GsonBuilder
 import com.google.gson.stream.JsonReader
 import com.lzy.okgo.callback.AbsCallback
@@ -9,10 +10,11 @@ import java.lang.reflect.ParameterizedType
 abstract class JsonCallback<T> : AbsCallback<T?>() {
     @Throws(Throwable::class)
     override fun convertResponse(response: Response): T? {
+        val code = response.code()
+        Log.i("test", code.toString())
         val body = response.body() ?: return null
         var data: T? = null
-        val gson =
-            GsonBuilder().registerTypeAdapterFactory(NullStringEmptyTypeAdapterFactory<Any?>())
+        val gson =GsonBuilder().registerTypeAdapterFactory(NullStringEmptyTypeAdapterFactory<Any?>())
                 .create()
         val jsonReader = JsonReader(body.charStream())
         val genType = javaClass.genericSuperclass

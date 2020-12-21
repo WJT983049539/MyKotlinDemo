@@ -29,7 +29,8 @@ public class NetPersenter {
             public void onSuccess(Response<NewsBean> response) {
                 Log.i("test",response.body().toString());
                 NewsBean newsBean=response.body();
-                if(getNewsInfo!=null){
+                if(getNewsInfo!=null){ //这里是必须的
+
                     getNewsInfo.getNewsInfo(newsBean);
                 }
             }

@@ -12,6 +12,7 @@ import android.widget.Toast
 import androidx.appcompat.app.ActionBar
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout.OnRefreshListener
@@ -90,16 +91,14 @@ class DrawerLayoutActivity : com.wjt.mylibrary.base.BaseActivity() , GetNewsInfo
             toolbar.setNavigationOnClickListener {
                 drawerLayout.openDrawer(GravityCompat.START)
             }
-
         }
-
-
         //创建适配器  并传入模拟的数据
         //创建适配器  并传入模拟的数据
          adapter = MyAdapter(items)
         //设置显示格式 2列
         //设置显示格式 2列
         val layoutParams = LinearLayoutManager(this)
+//        val layoutParams = GridLayoutManager(this,2)
         //将显示格式传给mRecyclerView
         //将显示格式传给mRecyclerView
         datalist.setLayoutManager(layoutParams)
@@ -130,7 +129,6 @@ class DrawerLayoutActivity : com.wjt.mylibrary.base.BaseActivity() , GetNewsInfo
     }
 
     override fun onClick(p0: View?) {
-        TODO("Not yet implemented")
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {

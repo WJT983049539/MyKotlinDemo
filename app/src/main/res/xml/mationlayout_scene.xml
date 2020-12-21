@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:motion="http://schemas.android.com/tools">
+    <!--开始的时候的属性集合-->
+    <ConstraintSet android:id="@+id/start">
+        <Constraint android:id="@+id/textView5"
+            app:layout_constraintVertical_bias="0.5"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:alpha="1"
+            android:rotationX="0"
+            android:layout_width="@dimen/dp_50" />
+    </ConstraintSet>
+    <!--结束的时候的属性集合-->
+    <ConstraintSet android:id="@+id/end">
+        <Constraint
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:alpha="0.1"
+            android:rotationX="1"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+    </ConstraintSet>
+
+    <Transition
+        app:constraintSetEnd="@id/end"
+        app:constraintSetStart="@+id/start"
+        app:duration="5000"
+
+        >
+
+        <OnClick app:targetId="@+id/textView5"
+          app:clickAction="transitionToEnd"/>
+        <KeyFrameSet >
+            <KeyPosition
+                app:motionTarget="@+id/textView5"
+                app:framePosition="49"
+               app:keyPositionType="pathRelative"
+                motion:percentY="0.5"
+                motion:percentX="0.8"
+                app:percentX="0.5"
+                app:percentY="-1"
+                />
+            <KeyAttribute
+                motion:framePosition="50"
+                motion:motionTarget="@id/box"
+                android:rotationY="180"
+                android:alpha="0"
+                />
+        </KeyFrameSet>
+    </Transition>
+</MotionScene>

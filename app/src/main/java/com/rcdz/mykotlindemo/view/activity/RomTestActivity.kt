@@ -44,6 +44,5 @@ class RomTestActivity : com.wjt.mylibrary.base.BaseActivity() {
     }
 
     override fun onClick(p0: View?) {
-        TODO("Not yet implemented")
     }
 }

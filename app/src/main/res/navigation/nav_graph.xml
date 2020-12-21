@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/fristFragment">
+
+    <fragment
+        android:id="@+id/fristFragment"
+        android:name="com.rcdz.mykotlindemo.view.fragment.FristFragment"
+        android:label="FristFragment" >
+        <action
+            android:id="@+id/action_fristFragment_to_twoFragment"
+            app:destination="@id/twoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/twoFragment"
+        android:name="com.rcdz.mykotlindemo.view.fragment.TwoFragment"
+        android:label="TwoFragment" />
+</navigation>

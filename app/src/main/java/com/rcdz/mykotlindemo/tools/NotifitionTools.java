@@ -13,8 +13,7 @@ import androidx.core.app.NotificationCompat;
 import com.rcdz.mykotlindemo.R;
 
 /**
- * 作用:
- *
+ * 作用:通知栏进度条工具类可以使用 *
  * @author:create by wjt
  * 邮箱 983049539@qq.com
  * time 2020/11/5 18:49

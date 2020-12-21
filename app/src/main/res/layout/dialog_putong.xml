@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="@dimen/dp_305"
+    android:layout_height="@dimen/dp_153"
+    android:layout_gravity="center"
+    android:background="@drawable/edit_bg2"
+    >
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_21"
+        android:text="邀请码"
+        android:textColor="#111111"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/dialog_content"
+        android:layout_width="@dimen/dp_240"
+        android:layout_height="@dimen/dp_38"
+        android:layout_marginTop="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="20sp"
+        android:text="这是一个textview"
+        android:textColor="#00BCD4"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView15"></TextView>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/dialog_content"
+        tools:layout_editor_absoluteX="0dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp_30"
+            android:layout_weight="2.5"
+            />
+        <TextView
+            android:id="@+id/button_no"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp_30"
+            android:layout_weight="2"
+            android:text="取消"
+            android:background="@drawable/button_bg2"
+            android:gravity="center"
+            android:layout_margin="@dimen/dp_2"
+            />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp_30"
+            android:layout_weight="2"
+            />
+        <TextView
+            android:id="@+id/button_sure"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp_30"
+            android:layout_weight="2"
+            android:text="确定"
+            android:background="@drawable/button_bg2"
+            android:gravity="center"
+            android:layout_margin="@dimen/dp_2"
+            />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp_30"
+            android:layout_weight="2.5"
+            />
+
+    </LinearLayout>
+    <!--    <TextView-->
+<!--        android:id="@+id/fa_sure"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="80dp"-->
+<!--        android:layout_marginTop="16dp"-->
+<!--        android:text="确定"-->
+<!--        android:textColor="#0978EC"-->
+<!--        android:textSize="24sp"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/familay_code" />-->
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
